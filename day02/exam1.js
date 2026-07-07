@@ -54,3 +54,30 @@ let age = 10
 let speed = 10 
 // 같은 값을 저장하지만 서로 다른 의미를 부여할 수 있다.
 
+// 출력함수
+// 함수: 자주 사용되는 코드들을 정의하여 재사용/호출
+// 내가만든 함수(아직 안배움) vs 남이 만든 함수(라이브러리)
+// 1. console.log(출력할자료): 브라우저 개발자 도구 CONSOLE 탭에 출력
+console.log("안녕하세요")
+
+// 2. alert(출력할 자료): 브라우저 알림창에 메시지 출력
+alert("안녕하다")
+
+// 3. document.querySelector("선택자") 
+// document(hyml문서), query(질의), Selector(선택자), inner(마크업 사이)HTML 대입
+document.querySelector("h3").innerHTML = "JS 대입한 값"
+// <script src="exam1.js">보다 위에  h3를 적어줘야 함 <h3></h3>
+
+// HTML 통신이 한정적 JS 백엔드 등 외부 언어와 통신 가능
+
+// 입력함수 
+// 1. confirm(출력할 메시지): 브라우저 알림창에  [예/아니오], true/false  반환
+let 결과1 = confirm() // 입력받은 true 또는 false 변수에 저장
+console.log(결과1) 
+
+// 2. prompt(출력메시지):  입력상자, 입력한 자료 반환(즉, 저장)
+let 결과2 = prompt()
+console.log(결과2)
+
+
+

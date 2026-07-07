@@ -2,3 +2,16 @@ let 이름 = prompt()
 let 운동종류 = prompt()
 let 운동시간 = prompt()
 
+console.log("[운동기록]")
+console.log("이름")
+console.log(이름)
+
+console.log("운동 종류")
+console.log(운동종류)
+
+console.log("운동 시간")
+console.log(운동시간)
+
+let 칼로리 = 운동시간 * 7
+console.log("칼로리")
+console.log(칼로리)

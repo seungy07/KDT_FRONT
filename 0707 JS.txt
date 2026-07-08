@@ -1,0 +1,43 @@
+07/07 JS
+HTML 이동 가능한 문자(https 이동가능한 문서 통신 규격)
+스크립트? 하나하나에 대한 동작 명령어 최소의 단위(동적기능) 자바와 파이썬에서 많이씀
+주요 라이브러리 REACT , NODE.JS
+
+리터럴을 체계회화된 코드를 만들어 놓음(기준이되는 코드 =ASCII code ) " "
+사과 ; 코딩에서 식별자가 됨(의미가 들어감, 즉 변수)
+"사과" 이터럴로 값 그 자체로 직접 문자로 표현
+리터럴은 변수처리가 불가능, 의미부여같은 불가, 추각적인 무엇 불가
+
+객체(다른 대상) <-> 주체(본인)
+object { }  자료들을 합치면 객체
+Array [ ] 배열 [ ]
+Function ( )
+
+[ ] 리터럴 포함 x 참조타입으로 자료2개이다
+원소도 자료 배열도 자료 -> 구별하기위해 원소, 배열
+컴퓨터 입장으로 바야함
+
+private 비공개 vs pubilc 공개용 repository
+커밋(로컬환경에 변경된 코드 완료
+푸시(커밋된 코드들을 github정장소 업로드
+
+pc 변경시
+메시지: 커밋 내용(협업간의 코드를 업로드한 날짜/이유 작성
+user.name/ user.email 구성오류 메시지
+터미널 오른쪽 상단 + 아이콘
+git config --global user.name
+git config --global user.email
+연동해제 - > 작업 폴더 숨긴파일보기 git 삭제
+
+-리터럴: 키보드로부터 입력받은 값 그 자체 *상수(고정값)  ) 'A', 3, 3.14, "ㄱ"
+-자료(data)들의 타입
+  - 숫자, 문자, 논리(불리언), 객체object{ } array[ ] function( ), null, undefind
+-변수: 하나의 값을 저장하는 공간
+  -let 변수명
+-상수: 하나의 값 저장하는 공간 *수정불가
+   -const 변수명
+-출력함수: console.log(출력값), alert(출력값) , document.querySelector('선택자').innerHTML = 출력값
+-입력함수: 
+    - 1. let result = prompt( ) 입력상자 제공
+    - 2. let result = confirm( ) [확인] [취소] 버튼
+

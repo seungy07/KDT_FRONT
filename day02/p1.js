@@ -1,6 +1,6 @@
-let 성명 = prompt()
-let 메뉴 =  prompt()
-let 수량 = prompt()
+let 성명 = prompt('이름:')
+let 메뉴 =  prompt('메뉴:')
+let 수량 = prompt('수량:')
 
 const 주문 = "[주문 접수]"
 console.log(주문)

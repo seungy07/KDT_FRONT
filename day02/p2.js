@@ -1,6 +1,6 @@
-let 이름 = prompt()
-let 운동종류 = prompt()
-let 운동시간 = prompt()
+let 이름 = prompt('이름:')
+let 운동종류 = prompt('운동종류:')
+let 운동시간 = prompt('운동시간:')
 
 console.log("[운동기록]")
 console.log("이름")

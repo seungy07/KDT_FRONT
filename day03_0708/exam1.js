@@ -113,56 +113,56 @@ console.log( 10 + "")    // 숫자 -> 문자
 // * 점수 >= 90 ? '합격' : '불합격' , 조건A ? 참A: 조건B ? 참B : 조건C ? 참C : 거짓 2~3개까지만 쓸것
 
 // [지문1] prompt 함수로 국어 , 영어 , 수학 점수를 각 입력받아서 (각 변수에 저장하고) 총점 과 평균을 계산하여 console탭에 출력하시오.
-// let 국어 = prompt('국어점수:') // 문자열로 입력됨  <Number()을 prompt 또는 변수 앞에다가> 
-// let 영어 = prompt('영어점수:')
-// let 수학 = prompt('수학점수:')
-// let 총점 = Number(국어) + Number(영어) + Number(수학)
-// let 평균 = 총점 / 3
-// console.log('총점:', 총점) 
-// console.log('평균:', 평균)
-// console.log( `총점: ${총점} 평균: ${ 평균}`) // 문자 백플림으로 가능
+let 국어 = prompt('국어점수:') // 문자열로 입력됨  <Number()을 prompt 또는 변수 앞에다가> 
+let 영어 = prompt('영어점수:')
+let 수학 = prompt('수학점수:')
+let 총점 = Number(국어) + Number(영어) + Number(수학)
+let 평균 = 총점 / 3
+console.log('총점:', 총점) 
+console.log('평균:', 평균)
+console.log( `총점: ${총점} 평균: ${ 평균}`) // 문자 백플림으로 가능
 
 // [지문2] prompt 함수로 반지름를 입력받아서 원넓이[반지름*반지름*3.14] 계산하여 console탭에 출력하시오.
-// let 반지름 = Number(prompt('반지름:'))
-// let 원넓이 = 반지름 * 반지름 * 3.14
-// console.log( `원의 넓이는 ${원넓이}`)
+let 반지름 = Number(prompt('반지름:'))
+let 원넓이 = 반지름 * 반지름 * 3.14
+console.log( `원의 넓이는 ${원넓이}`)
 
 // [지문3] prompt 함수로 두 실수를 입력받아서 앞 실수의 값이 뒤실수의 값의 비율% 계산하여 console탭에 출력하시오.
-// let 앞실수 = prompt('앞 실수 값:')
-// let 뒤실수 = prompt('뒤 실수 값:')
-// console.log(`비율 ${Number(앞실수) / Number(뒤실수) * 100}%입니다.`)
+let 앞실수 = prompt('앞 실수 값:')
+let 뒤실수 = prompt('뒤 실수 값:')
+console.log(`비율 ${Number(앞실수) / Number(뒤실수) * 100}%입니다.`)
 
 // [지문4] prompt 함수로 정수를 입력받아 입력받은 값이 홀수이면 true / 짝수이면 false 로 console탭에 출력하시오.
-// let 숫자 = Number(prompt('정수를 입력하세요'))
-// let 결과 = 숫자 % 2 == 1 // 나머지 표시를 흠
-// console.log(`결과는 ${결과}`) 
+let 숫자 = Number(prompt('정수를 입력하세요'))
+let 결과 = 숫자 % 2 == 1 // 나머지 표시를 흠
+console.log(`결과는 ${결과}`) 
 
 // [지문5] prompt 함수로 정수를 입력받아 입력받은 값이 7의 배수이면 true / 아니면 false 로 console탭에 출력하시오.
-// let 정수2  = Number(prompt('정수 입력'))
-// let 결과2 = 정수2 % 7 == 0 ? '맞다' : '아니다'
-// console.log( `7의 배수인지는 ${결과2}`)
+let 정수2  = Number(prompt('정수 입력'))
+let 결과2 = 정수2 % 7 == 0 ? '맞다' : '아니다'
+console.log( `7의 배수인지는 ${결과2}`)
 
 // [지문6] prompt 함수로 아이디 와 비밀번호를 입력받아서 (입력받은)아이디가 'admin' 이고 (입력받은)비밀번호가 1234 와 일치하면 true / 아니면 false 출력하시오.
-// let id = prompt('아이디')
-// let pw = prompt('비밀번호')
-// let 로그인 = id == "admin" && pw == "1234"
-// console.log(` 결과 ${로그인}`)  
+let id = prompt('아이디')
+let pw = prompt('비밀번호')
+let 로그인 = id == "admin" && pw == "1234"
+console.log(` 결과 ${로그인}`)  
 
 // [지문7] prompt 함수로 정수를 입력받아 입력받은 값이 홀수 이거나 7배수 이면 true / 아니면 false 로 console탭에 출력하시오.
-// let 수 = Number(prompt("값을 입력하시오"))
-// let 계산 = 수 % 7 == 0  || 수 % 2 == 1 ? 'true': 'false'
-// console.log(` 7의배 수 혹은 홀수 인지는 ${계산}`)
+let 수 = Number(prompt("값을 입력하시오"))
+let 계산 = 수 % 7 == 0  || 수 % 2 == 1 ? 'true': 'false'
+console.log(` 7의배 수 혹은 홀수 인지는 ${계산}`)
 
 // [지문8] 1차점수 와 2차점수 prompt함수로 각 입력받아서 총점이 150점이상이면 '합격' 아니면 '불합격' HTML의 <h3> 에 출력하시오.
-// let 일차점수 = Number(prompt('1차 점수'))
-// let 이차점수 = Number(prompt('2차 점수'))
-// let 총점 = 일차점수 + 이차점수
-// let 결과 = 총점 >= 150 ? '합격' : '불합격'
-// document.querySelector("h3").innerHTML = ` 결과: ${결과} ` // h3 안에다가 결과 출력. h3 마크업을 넣어줘야함 마크업 사이가 inner
+let 일차점수 = Number(prompt('1차 점수'))
+let 이차점수 = Number(prompt('2차 점수'))
+let 총점 = 일차점수 + 이차점수
+let 결과 = 총점 >= 150 ? '합격' : '불합격'
+document.querySelector("h3").innerHTML = ` 결과: ${결과} ` // h3 안에다가 결과 출력. h3 마크업을 넣어줘야함 마크업 사이가 inner
 
 // [지문9] 두 사람의 이름을 prompt함수로 각 입력받아서 만일 이름이 '유재석' 이면 뒤에 (방장) 이라고 이름 뒤에 붙이고 아니면 생략한다.  HTML의 <ol> 에 결과를 출력하시오.
-// let 이름1 = prompt('이름1:')
-// let 이름2 = prompt('이름2:')
-// let 결과1 = 이름1 == "유재석" ? 이름1 + "(방장)" : 이름1
-// let 결과2 = 이름2 == "유재석" ? 이름2 + "(방장)" : 이름2
-// document.querySelector("ol").innerHTML = `<li> ${결과1} </li> <li> ${결과2} </li>`  // 순서대로 HTML에 출력 
+let 이름1 = prompt('이름1:')
+let 이름2 = prompt('이름2:')
+let 결과1 = 이름1 == "유재석" ? 이름1 + "(방장)" : 이름1
+let 결과2 = 이름2 == "유재석" ? 이름2 + "(방장)" : 이름2
+document.querySelector("ol").innerHTML = `<li> ${결과1} </li> <li> ${결과2} </li>`  // 순서대로 HTML에 출력 

@@ -140,3 +140,7 @@ if(drinkNames[주문] == '콜라'){console.log(`선택하신 음료는 ${drinkNa
 else if(drinkNames[주문] == '사이다'){console.log(`선택하신 음료는 ${drinkNames[주문]}입니다. 가격은 ${drinkPrices[주문]}원입니다.`)}
 else if(drinkNames[주문] == '커피'){console.log(`선택하신 음료는 ${drinkNames[주문]}입니다. 가격은 ${drinkPrices[주문]}원입니다.`)}
 else{console.log('없는 상품입니다.')}
+
+/*
+if(주문 <0 || 주문 > 2){console.log('업슨ㄴ 상품')}  ** 범위 논리
+else{console.log(`선택하신 음료는 ${drinkNames[주문]}입니다. 가격은 ${drinkPrices[주문]}원입니다.`)} */

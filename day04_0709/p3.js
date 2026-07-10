@@ -1,5 +1,5 @@
 // 문제1: 과일 목록 관리
-/*
+
 let fruitList = [ '사과', '바나나']
 let 과일 = prompt('과일 입력')
 let 존재여부 = fruitList.includes(과일)
@@ -65,5 +65,11 @@ let index = carArray.indexOf(차량번호) //문자열-> index(숫자) 찾기
 let 차량위치 = locationArray[index] // 인덱스 (숫자) -> 문자찾기
 if(carArray.includes(차량번호) == true){console.log(`${차량위치}에 있다`)}
 else{console.log('차량이 존재하지 않습니다.')}
-*/
-//문제10:
+
+//문제10: 수강 신청 목록에서 과목 제외하기
+let courseList = ['수학', '영어', '과학', '국어']
+let 삭제 = prompt('삭제할 과목 입력(수학, 영어, 과학, 국어)')
+if(courseList.includes(삭제) == true){
+    courseList.splice(courseList.indexOf(삭제),1);
+    console.log(`현재 수강과목은 ${courseList}입니다`)
+}else{console.log('해당 과목은 신청 목록에 없습니다.')}

@@ -25,6 +25,7 @@ for(let line = 1; line <= 5; line++){
     output = output + '\n' // 줄마다 줄바꿈 처리
 } 
 */
+
 //문제3: 배열에서 특정 문자 찾기
 //다음 사용자 이름 배열에서 이름에 '솔' 이라는 글자가 들어간 첫 번째 사용자를 찾으면, 해당 사용자의 이름을 출력하고 반복문을 종료하시오.
 let userNames = ['김하준', '이서아', '박솔민', '최도윤']
@@ -96,22 +97,21 @@ for(let i = 0; i <= movieNames.length -1; i++){
     }html += "<br />";  //한줄 작성후 줄바꿈
 }document.querySelector("p").innerHTML = html
 
-/*문제 9: 좌석 예약 상태 표시하기
-총 6개의 좌석 상태 정보가 담긴 배열을 이용하여, 좌석 배치도와 상태를 HTML에 출력하는 프로그램을 작성하시오.
-(2). 구현 조건
-for 반복문을 사용하여 6개의 좌석을 모두 출력합니다.
-각 좌석은 하나의  태그로 표시합니다.
-좌석 상태에 따라  태그에 CSS 색상을 다르게 적용합니다.
-'빈좌석': color: blue;
-'예약석': color: red;
-좌석은 2칸씩 3줄 형태로 배치합니다.
-(3). 출력 예시 (HTML)
-빈좌석 예약석 
-예약석 빈좌석
-예약석 빈좌석
-
+//문제 9: 좌석 예약 상태 표시하기 총 6개의 좌석 상태 정보가 담긴 배열을 이용하여, 좌석 배치도와 상태를 HTML에 출력하는 프로그램을 작성하시오. <span style="color:blue;"> ${seatStatus[i]} </span>
 let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석', '빈좌석']
-*/
+let html = ""
+for(let i = 0; i <= seatStatus.length - 1; i++){
+    if(seatStatus[i] == '빈좌석'){
+        html += `<span style="color:blue;"> ${seatStatus[i]} </span>`
+    }else{
+        html += `<span style="color:red;"> ${seatStatus[i]} </span>`
+    }
+    if((i + 1) % 2 == 0){
+        html += "<br />"
+    }
+}document.querySelector("div").innerHTML = html
+
+
 //문제 10: 주차 요금 정산하기  차량별 주차 시간 데이터가 주어졌을 때, 아래의 요금 규정에 따라 각 차량이 지불해야 할 최종 주차 요금을 계산하여 HTML에 출력하는 프로그램을 작성하시오.
 let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];
 let usageMinutes = [65, 30, 140, 420];

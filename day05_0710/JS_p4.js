@@ -102,7 +102,7 @@ let seatStatus = ['빈좌석', '예약석', '예약석', '빈좌석', '예약석
 let html = ""
 for(let i = 0; i <= seatStatus.length - 1; i++){
     if(seatStatus[i] == '빈좌석'){
-        html += `<span style="color:blue;"> ${seatStatus[i]} </span>`
+        html += `<span style="color:blue;"> ${seatStatus[i]} </span>`  // 색칠하고 출력
     }else{
         html += `<span style="color:red;"> ${seatStatus[i]} </span>`
     }

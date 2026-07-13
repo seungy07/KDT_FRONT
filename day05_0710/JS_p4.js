@@ -1,4 +1,4 @@
-
+/*
 //문제1: 배열에서 최댓값 찾기
 let numbers = [23, 5, 67, 12, 88, 34]
 let max = 0
@@ -24,7 +24,7 @@ for(let line = 1; line <= 5; line++){
     }
     output = output + '\n' // 줄마다 줄바꿈 처리
 } 
-*/
+
 
 //문제3: 배열에서 특정 문자 찾기
 //다음 사용자 이름 배열에서 이름에 '솔' 이라는 글자가 들어간 첫 번째 사용자를 찾으면, 해당 사용자의 이름을 출력하고 반복문을 종료하시오.
@@ -111,19 +111,23 @@ for(let i = 0; i <= seatStatus.length - 1; i++){
     }
 }document.querySelector("div").innerHTML = html
 
-
+*/
 //문제 10: 주차 요금 정산하기  차량별 주차 시간 데이터가 주어졌을 때, 아래의 요금 규정에 따라 각 차량이 지불해야 할 최종 주차 요금을 계산하여 HTML에 출력하는 프로그램을 작성하시오.
 let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];
 let usageMinutes = [65, 30, 140, 420];
 let html = ""
 for(let i = 0; i <= carNumbers.length - 1; i++){
-    html += carNumbers[i] + ":" + " "
-    html += usageMinutes[i] + "분 주차" + "," + " "
-    html += "최종 요금:" + " "
+    html += carNumbers[i] + ":" + " " + usageMinutes[i] + "분 주차" + "," + " " + "최종 요금:" + " "
+    let 최종요금 =1000 + (parseInt((usageMinutes[i] - 30)/10) * 500)
     if(usageMinutes[i] <= 30){
-        html += 1000 + "원";
-    }else{
-        html += 1000 + (parseInt((usageMinutes[i] - 30)/10) * 500) + "원";
+         html += 1000 + "원";
+    }
+    else if( 최종요금 >= 20000){
+            최종요금 = 20000
+            html += 최종요금 + "원"
+    }
+    else if(최종요금 <= 20000){
+            html += 최종요금 + "원"
     }
     html += "<br />"
 }document.querySelector("p").innerHTML = html

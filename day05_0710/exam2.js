@@ -1,4 +1,4 @@
-/*
+
 // 반복문 제어키워드
 // 1. continue:  반복문의 증감식으로 이동
 for( let 반복수 = 1; 반복수 <= 5; 반복수++){
@@ -61,4 +61,3 @@ for(let i = 0; i <= nameArray.length -1; i++){
     }html += "<br />"; // 이름마다  줄바꿈
 }document.querySelector('p').innerHTML = html
 //총 30번 반복 
-*/

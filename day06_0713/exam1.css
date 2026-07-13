@@ -1,0 +1,81 @@
+h5{ color: blueviolet; }
+/* 주석 */
+
+/* html 마크업에 스타일 적용 문법 
+
+    선택자{ 속성명 : 속성값 ; 속성명 : 속성값 ; }
+
+*/
+
+/* 선택자의 종류
+    1. * :와일드카드(전체)  지정이 안되어있는 것에만 적용
+    2. h4 : 특정마크업명
+    3. .className : 특정클래서 명 지정 ) 마크업내에 clss = "이름" ( 복수 식별 ) 
+    4. #id : 특정 아이디명 지정 ) 마크업내에 id = " 이름 "   ( 단일 식별. 중복x. 마크업 개당 한개씩 )
+
+    선택자의 우선순위  - ( 만약에 동일한 속성이 중복이면 ) 
+      * < 특정마크업 < .className < #id < 인라인(방법1)
+      - 만일 동일한 수준이면 마지막에 구성한 CSS 적용
+      - <마크업 style = "CSS문법"> 우선 적용된다.      
+*/
+*{ color: black; }
+h6{ color: chartreuse; }
+.구역1{ color: beige; } /* .className */
+#구역2{ color: chocolate } /* #id */
+#구역{ color: brown; } /* 동일 수준일시 */
+
+/* 자식선택자: 상위선택자 > 하위선택자 */
+div > h3{ color: cornflowerblue; }
+
+/* 자손선택자: 상위선택자(띄어쓰기) 하위선택자*/
+div li{ background-color: blanchedalmond;}
+
+/* 복수선택자 : , 이용한 선택자 2개이상 작성 */
+h3 , h4{ color: black; }
+
+/* 다양한 선택자를 제공함으로써 중복을 방지 */
+html > body > div > ol > li{ }
+
+/* vs */
+#이름1{ }
+
+
+/* 누구를{ 무엇을 : 어떻게; } 
+   속성값 뒤로 ;(세미클론) 닫는다 (구분) 
+   */
+
+.title{ 
+    font-family: "궁서"; /* 글꼴 */
+    font-size: 12px ; /* 글자 크기 */
+    font-style: italic ; /* 글자 기울기 */
+    font-weight: bold; /* 글자 굵기 (진하게) */
+}
+
+/* 웹폰트 : 눈누/구글폰트 홈페이지에서 웹폰트 코드 복사 */ 
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+.본문구역{
+    font-family: 'Paperozi'; /* 웹폰트 글꼴 */
+    color: red ;
+    word-spacing: 10px ; /* 단어간격(어간) */
+    letter-spacing: 5px ; /* 글자간격(자간) */
+    line-height: 170% ; /* 줄간격 */
+}
+
+.작성자{
+    text-align: center ; /* 텍스트 정렬: left, center, right */
+    text-decoration: underline overline line-through; /* 밑줄, 윗줄, 취소선 */
+    text-shadow: 10px 10px 3px chocolate ; /* (x축 +오른쪽 - 왼쪽
+                                                y축 +아래 -위쪽  
+                                                흐림정도 색상) 순으로  */
+    /* 색상 표현 방법 */
+    color: gray ;  /* 색상명 */
+    color: rgb(7, 30, 70 );  /* 레드 그린 블루 0 ~ 255 조합색상 */
+    color: rgb(7, 30, 70, 0.6 );  /* 알파 투명도 a */
+    color:  #008000 ; /* 헥스 코드 ( *백엔드 권장) */
+}
+

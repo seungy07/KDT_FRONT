@@ -1,0 +1,49 @@
+/*  박스 구역에 관한 CSS
+선택자{ 속성명 : 속성값 ; 속성명 : 속성값 ; }
+
+*/
+
+*{
+    border: solid 5px red; /* 구역 테두리 : 선종류 선굵기 선색상 */
+    padding: 10px ; /* 안쪽여백 : */
+}
+
+.box1{
+    border-top: solid 1px orange; /* 위쪽테두리: */
+    border-right: dashed 2px blue; /* 오른쪽테두리 파선*/
+    border-left: dotted 3px black; /* 왼쪽테두리  실선*/
+    border-bottom: double 4px green; /* 아래쪽테두리 이중선 */
+    border-radius: 5px 10px 15px 20px; /* 테두리 둥근모서리  왼쪽상단부터 시계 방향 */
+
+    box-shadow: 3px 3px 1px red; /* 구역그림자 : x축(-+) y축(-/+아래) 흐름정도 색상 */
+    
+    text-align: center ; /* 구역내 테스트 요소 가운데 정렬 */
+
+    width: 200px; /* 가로 사이즈 */
+    height: 100px; /* 세로 사이즈 */
+
+}
+
+.img1{
+    width: 100px;
+    height: 100px;
+}
+
+.box2{ text-align: right;} /* 입력상자 정렬 */
+
+ /* 자식선택자 */
+.box2 > input{ 
+    width: 100px; height: 100px;
+    border-radius: 10px; 
+} /* 입력상자 사이즈 조절 */
+
+.box3{
+    padding: 20px ; /* 안쪽 여백 : 구역 테두리 기준으로 안쪽 여백 */
+    margin: 10px ; /* 바깥여백 : 구역테두리 기준으로 바깥여백*/
+}
+
+.box4{
+    padding: 10px 15px 20px 25px ; /* 위 오른쪽 아래 왼쪽 */
+    margin: 10px 20px; /* 위/아래 ,  왼/오른쪽  세트*/
+}
+

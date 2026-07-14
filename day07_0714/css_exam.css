@@ -17,7 +17,7 @@
 
     box-shadow: 3px 3px 1px red; /* 구역그림자 : x축(-+) y축(-/+아래) 흐름정도 색상 */
     
-    text-align: center ; /* 구역내 테스트 요소 가운데 정렬 */
+    text-align: center ; /* 구역내 *요소* 가운데 정렬 */
 
     width: 200px; /* 가로 사이즈 */
     height: 100px; /* 세로 사이즈 */
@@ -44,6 +44,47 @@
 
 .box4{
     padding: 10px 15px 20px 25px ; /* 위 오른쪽 아래 왼쪽 */
-    margin: 10px 20px; /* 위/아래 ,  왼/오른쪽  세트*/
+    margin: 10px 20px; /* (위/아래) ,  (왼/오른쪽)  세트*/
 }
+
+.box5{
+    margin: 0 auto; /* 바깥여백의 왼/오른쪽을 auto 설정  * 본인 *을 가운데 정렬*/
+    width: 50px; /* 구역의 가로 사이즈, 주의할점: 생략시 100% */
+    color: red; /* 요소 색상 */
+    background-color: black; /* 구역 배경 색상*/
+    text-align: center; /* 구역안 요소들 가운데 정렬 */
+}
+
+.s1{
+    display: inline; /* span,a  마크업 기본값 */
+    width: 100px; height: 100px; /* 인라인은 구역사이즈 설정 불가 */
+    padding: 20px; /* 왼/오른쪽만 적용 */
+    margin: 20px; /* 왼/오른쪽만 적용 */
+}
+
+.s2{
+    display: block; /* 한줄을 차지,  div,h 등등 마크업 기본값 */
+    width: 100px; height: 100px; /* 사이즈 조정 가능 */
+    margin: 20px; padding: 20px;
+}
+
+.s3{
+    display: inline-block; /* input 등등 마크업 기본값*/
+    width: 100px; height: 100px;
+    padding: 20px; margin: 20px;
+}
+
+.s4{
+    display: none; /* 숨기기 */
+}
+/* 복수 선택자 ,*/
+.box6, box7{
+    width: 500px; padding: 20px; /* 패딩은 왼쪽 오른쪽*/
+}
+/* box-sizsing: content-box : 컨텐츠 */
+.box6{ box-sizing: content-box; }
+/* box-sizsing: border-box : 컨텐츠 + 안쪽여백 (권장) */
+.box7{ box-sizing: border-box;}
+
+
 

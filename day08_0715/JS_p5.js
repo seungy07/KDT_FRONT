@@ -1,6 +1,5 @@
 
 /* 문제 1: prompt로 제품 정보 객체 만들기 */
-/*
 let 제품명 = prompt('제품명')
 let 가격 = prompt('가격')
 let 제조사 = prompt('제조사')
@@ -9,10 +8,8 @@ product.제품명 = 제품명
 product.가격 = 가격
 product.제조사 = 제조사
 console.log(product)
-*/
 
 /*문제 2: prompt로 회원 가입 및 아이디 중복 확인 기능 구현  */
-/*
 const members = [
     { id: 'user1', password: 'pass1', name: '사용자1' },
     { id: 'user2', password: 'pass2', name: '사용자2' },
@@ -33,11 +30,9 @@ for(let i = 0; i <= members.length -1; i++){
     members.push(member)
     console.log(members)
 }
-*/
 
 /* 문제 3: 객체 배열의 속성 값 평균 구하기
 scores 배열에 담긴 모든 학생의 수학(math) 점수 평균을 계산하여 콘솔에 출력하시오. */
-/*
 const scores = [
     { name: 'A', math: 80, science: 92 },
     { name: 'B', math: 95, science: 88 },
@@ -46,11 +41,9 @@ let 수학총점 = 0;
 for(let i = 0; i <= scores.length - 1; i++){
     수학총점 += scores[i].math
 }console.log(수학총점/scores.length)
-*/
 
 /* 문제 4: 특정 조건을 만족하는 객체 찾기
 products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력하시오. 일치하는 객체가 없으면 "상품을 찾을 수 없습니다."를 출력합니다. */
-/*
 const products = [
     { id: 1, name: '사과' },
     { id: 2, name: '바나나' },
@@ -65,11 +58,9 @@ for(let i = 0; i <= products.length - 1; i++){
 }if( 존재여부 != true){
     console.log('상품을 찾을 수 없습니다')
 }
-*/
 
 /* 문제 5: 객체 배열 필터링하기
 users 배열에서 isActive가 true인 사용자들만으로 구성된 새로운 배열 activeUsers를 만들고, 이 배열을 콘솔에 출력하시오. */
-/*
 const users = [
     { id: 1, name: '유저1', isActive: true },
     { id: 2, name: '유저2', isActive: false },
@@ -81,11 +72,9 @@ for(let i = 0; i <= users.length - 1; i++){
         activeUsers.push(`id: ${users[i].id}, name: ${users[i].name}`)
     }
 }console.log(activeUsers)
-*/
 
 /*문제 6: 객체 배열 데이터 변환하기
 movies 배열에 있는 각 영화 객체에서 title 속성만 추출하여, 영화 제목들로만 이루어진 새로운 배열 movieTitles를 만들고 콘솔에 출력하시오. */
-/*
 const movies = [
     { title: '인셉션', director: '크리스토퍼 놀란' },
     { title: '기생충', director: '봉준호' },
@@ -94,11 +83,9 @@ let movieTitles = [ ]
 for(let i = 0; i <= movies.length - 1; i++){
     movieTitles.push(movies[i].title)
 }console.log(movieTitles)
-*/
 
 /* 문제 7: 데이터 그룹화하기
 다음 team 배열을 department를 기준으로 그룹화하여, 아래 result와 같은 형태로 만드시오. */
-/*
 const team = [
     { name: '철수', department: '개발팀' },
     { name: '영희', department: '기획팀' },
@@ -113,10 +100,8 @@ for(let i = 0; i <= team.length - 1; i++){
         팀분류.기획팀.push(team[i].name)
     }
 }console.log(팀분류)
-*/
 
 /*문제 8: 장바구니 총액 계산하기 */
-/*
 const cart = [{ id: 1, quantity: 2 },{ id: 3, quantity: 1 }];
 const productsInfo = [
     { id: 1, price: 1000 },
@@ -130,11 +115,9 @@ for(let i = 0; i <= productsInfo.length - 1; i++){
         }
     }
 }console.log(` 총 결제금액은 ${총결제}원`)
-*/
 
 /* 문제 9: 투표 결과 집계하기
 다음 votes 배열은 투표 결과를 나타냅니다. 각 후보가 몇 표를 받았는지 집계하여, 후보의 이름이 키이고 득표수가 값인 객체를 만들어 콘솔에 출력하시오.*/
-/*
 const votes = ['A', 'B', 'B', 'C', 'A', 'B', 'A'];
 let Acount = 0; let Bcount = 0 ; let Ccount = 0 ;
 for(let i = 0; i <= votes.length - 1; i++){
@@ -148,10 +131,8 @@ for(let i = 0; i <= votes.length - 1; i++){
 }
 let 득표수 = { A: Acount, B:Bcount, C:Ccount}
 console.log(득표수)
-*/
 
 /* 문제 10: 웹툰 평점 시각화하기 */
-/*
 const webtoons = [
     { title: '나 혼자만 레벨업', rating: 9.8 },
     { title: '유미의 세포들', rating: 9.9 },
@@ -167,15 +148,8 @@ for(let i = 0; i <= webtoons.length - 1; i++){
         }else{html += '☆'}
     }html += '<br />'
 }document.querySelector("p").innerHTML = html
-*/
 
-/* 문제11 : 공공데이터 포털 : 인천 부평구 맛집 현황 테이블 만들기
-2. response 객체 안의 data 배열을 반복문을 사용하여 순회합니다.
-3. 각 동(행)의 정보를 표시할 HTML <table> 태그를 문자열로 만듭니다.
-/4. 테이블의 각 셀에는 '업 소 명', '세대수', '소재지', '지정메뉴', '전화번호','업태' 정보가 순서대로 포함되어야 합니다.
-5. 최종적으로 완성된 HTML 테이블 문자열을 document.write() 사용하여 화면에 출력합니다. */
- 
-
+/* 문제11 : 공공데이터 포털 : 인천 부평구 맛집 현황 테이블 만들기 */
 let response = {"currentCount":10,"data":[{"소재지":"인천광역시 부평구 안남로417번길 20, 2층 (청천동)","업소명":"1982삼계정","업태":"한식","연번":1,"전화번호":"032-512-1982","지정메뉴":"녹두삼계탕"},{"소재지":"인천광역시 부평구 부평대로 301 (청천동,남광센트렉스 111호)","업소명":"갈비가","업태":"한식","연번":2,"전화번호":"032-363-3787","지정메뉴":"속초코다리냉면"},{"소재지":"인천광역시 부평구 평천로553,1층(삼산동)","업소명":"경복궁삼계탕","업태":"한식","연번":3,"전화번호":"032-511-1494","지정메뉴":"들깨삼계탕"},{"소재지":"인천광역시 부평구 부평대로63번길10-11(부평동)","업소명":"금강산추어탕","업태":"한식","연번":4,"전화번호":"032-527-8118","지정메뉴":"추어탕"},{"소재지":"인천광역시 부평구 부평대로87번길 4(부평동)","업소명":"뉴욕반점","업태":"중식","연번":5,"전화번호":"032-516-4488","지정메뉴":"삼선짬뽕,찹쌀탕수육"},{"소재지":"인천광역시 부평구 신트리로22번길 15-14 (부평동, 1층 일부)","업소명":"더히든키친","업태":"양식","연번":6,"전화번호":"032-272-7276","지정메뉴":"바질페스토파스타"},{"소재지":"인천광역시 부평구 마장로 402(청천동)","업소명":"덕수갈비","업태":"한식","연번":7,"전화번호":"032-517-4070","지정메뉴":"왕갈비탕"},{"소재지":"인천광역시 부평구 대정로 93, 웰링턴 1층 103호 (부평동)","업소명":"동강해물탕","업태":"한식","연번":8,"전화번호":"032-524-9166","지정메뉴":"해물탕"},{"소재지":"인천광역시 부평구 백범로468번길45(십정동)","업소명":"동암아구해물탕","업태":"한식","연번":9,"전화번호":"032-435-0233","지정메뉴":"해물찜,해물탕"},{"소재지":"인천광역시 부평구 부흥로257-7(부평동)","업소명":"들내음 들깨칼국수","업태":"한식","연번":10,"전화번호":"032-515-4151","지정메뉴":"팥칼국수"}],"matchCount":67,"page":1,"perPage":10,"totalCount":67}
 let data = response.data
 let html = `<table>

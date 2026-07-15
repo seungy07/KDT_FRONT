@@ -1,0 +1,43 @@
+
+div{
+    border: 1px solid grey;
+    width: 300px;
+    margin: 0 auto;
+    height: 500px;
+    
+}
+div > img{
+    width: 300px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.상품명{
+    font-weight: bold;
+    margin-bottom: px;
+    margin-bottom: 20px;
+    word-spacing: 2px;
+    
+}
+.가격{
+    font-weight: bold;
+    font-size: 11px;
+}
+.소개글{
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+div > p1{
+    font-size: 14px;
+}
+.수1{
+    color: orange;
+}
+수2{
+    color: orange;
+}
+p1{
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}

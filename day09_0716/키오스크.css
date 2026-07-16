@@ -70,6 +70,8 @@
     gap: 20px;
     text-align: center;
     background:white;
+    justify-content: center;
+    align-items: center;
 }
 .버튼{
     width: 20px;
@@ -80,6 +82,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
     font-size: 20px;
 }
 .개수{ font-size: 20px;}

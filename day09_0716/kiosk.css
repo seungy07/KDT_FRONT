@@ -1,0 +1,116 @@
+
+.box{
+    width: 400px;
+    height: 600px;
+    border: solid 1px black;
+}
+.imgbox{
+    text-align: center;
+    width: 400px;
+    height: 60px;
+    margin: auto;
+}
+.img{
+    width: 58px;
+    height: 58px;
+    margin: auto;
+}
+.topbox{
+    width: 400px;
+    height: 60px;
+    background-color: #F9D4D4;
+    padding: 0;
+    margin: 0 auto 20px;
+}
+.drinkbox{
+    display: flex; width: 400px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.drinkbox2{
+    display: flex; width: 400px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 13px;
+
+}
+.i{
+    width: 75px;
+    height: 100px;
+}
+.a1{
+    table-layout:fixed;
+    width:100%;
+    height:100%;
+    border-collapse:collapse;
+}
+.a1 th{
+    border:1px solid black;
+    width:25%;
+    height: 20px;
+    vertical-align:middle;
+    font-size:8px;
+    text-align:center;
+}
+.kiosk{
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}   
+.cart-area{
+    display: flex;
+    background-color: pink;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 5px 20px;
+}
+.cart-left{
+    text-align: center;
+    font-size: 13px;
+}
+.cart-title{
+    font-size: 13px;
+    font-weight: bold;
+}
+.cart-box{
+    width: 158px;
+    height: 140px;
+    background-color: #D9D9D9;
+    margin: auto;
+}
+.mi{
+    padding: 1px 5px;
+    background-color: white;
+    border: #D9D9D9;
+    box-shadow: 1px 1px 1px white;
+    font-size: 15px;
+}
+.pl{
+    padding: 1px 5px;
+    background-color: white;
+    border: #D9D9D9;
+    box-shadow: 1px 1px 1px white;
+    font-size: 13px;
+}
+.total-price{
+    margin-top: 3px;
+}
+.pay-button{
+    text-align: center;
+    padding: 10px;
+}
+.button{
+    background-color: #F9D4D4;
+    border: #F9D4D4;
+    width: 87px;
+    height: 35px;
+    margin: 3px auto 5px;
+}
+.homeScreen{
+    text-align: left;
+    font-size: 13px;
+}
+
+.asdf{
+    margin: 0px auto 10px;
+}

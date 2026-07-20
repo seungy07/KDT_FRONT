@@ -1,4 +1,4 @@
-*{ border: 1px solid red;}
+
 /* 전체 레이아웃 연습 */
 
 /* 자주 사용되는 기본CSS + 기본 css 제거 */
@@ -50,3 +50,62 @@ li{ list-style-type: none; } /* li 항목 글머리 제거 ) 점 숫자 */
 
 /* [2] 본문 구역*/
 #main_img > img{ width: 100% ; } /* 이미지 100% 사이즈 */
+
+/* =================================================================================== */
+
+/* [3] 사이드바 / 본문 */
+
+#main{ 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px; }
+
+.sidebar{
+    width: 220px; /* 1280px 에서 220px 상사용*/ }
+
+.sidebar > h3{
+    background-color: #808080;
+    color: #ffffff;
+    padding: 10px; }
+
+.sidebar > ol > li{
+    padding: 10px;
+    border-bottom:1px solid #eeeeee; }
+
+.content{
+    width: 1050px;
+    margin-bottom: 20px;
+
+}
+
+.content > h3{ 
+    font-size: 20px; 
+    border-bottom: 1px solid #eeeeee; }
+
+.content > img{
+    display: block; /* 이미지가 인라인(기본값)  margin: 0 auto; 안먹눈다*/
+    margin: 0px auto;
+    
+}
+
+/* ========================================================= */
+
+/* [4] foorer */
+#footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2c2a29;
+    align-items: center;
+    font-size: 11px;
+    margin-top: 20px;
+}
+.footer-inner{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+
+.right-foot{ color: #ffffff;}

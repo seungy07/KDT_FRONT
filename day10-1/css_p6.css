@@ -1,0 +1,52 @@
+*{ border: 1px solid red;}
+/* 전체 레이아웃 연습 */
+
+/* 자주 사용되는 기본CSS + 기본 css 제거 */
+*{ /* content + padding 포함 사이즈 */
+    box-sizing: border-box; 
+    padding: 0px; margin: 0px; /* 기본여백 제거*/
+}
+a{
+    text-decoration:  none ; /* 하이퍼링크 밑줄 제거(기본: 밑줄) */
+    color: black; /* 하이퍼링크 색상 검정 (기본: 파랑)*/
+}
+li{ list-style-type: none; } /* li 항목 글머리 제거 ) 점 숫자 */
+
+#header{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#main{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/* [1] header */
+#header{ 
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center; /* flex 하위 요소들 세로정렬*/
+}
+
+#header > .right-head > .top-menu{
+    display: flex;
+    justify-content: end; /* 오른쪽 정렬*/
+    margin: 10px 0px;
+}
+.main-menu{
+    display: flex;
+    justify-content: end;
+    margin: 20px 0px;
+}
+.top-menu > li{ margin-left: 10px;}
+.main-menu > li{ 
+    margin-left: 50px; /* 왼쪽 바깥여백 */
+    font-size: 25px;
+    font-weight: bold; /* 글꼴 진하게 */
+}
+/* =================================================================================== */
+
+/* [2] 본문 구역*/
+#main_img > img{ width: 100% ; } /* 이미지 100% 사이즈 */

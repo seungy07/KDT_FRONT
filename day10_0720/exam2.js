@@ -86,6 +86,5 @@ let globalText = '전역'; 변수를 선언하세요. printLocal 함수 안에�
 let globalText = '전역'
 function printLocal(){
     let localText = '지역';
-    console.log(globalText,localText)
-}
+    console.log(globalText,localText)}
 printLocal()

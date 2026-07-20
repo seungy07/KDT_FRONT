@@ -67,3 +67,17 @@ HTML : 웹페이지 뼈대, JS: 동적(이벤트) 행동,  CSS: 웹페이지 꾸
     .box6{ box-sizing: content-box; }
     /* box-sizsing: border-box : 컨텐츠 + 안쪽여백(padding) (권장) */ 
     .box7{ box-sizing: border-box;}
+
+ - flex
+display : flex; 기본선언후 사용
+/* 하위요소들의 크기가 구역보다 커지면 자동크기조정 */
+flex-wrap:  nowrap; /* 자동크기 부여 (기본값), wrap:자동줄바꿈 처리 */
+flex-direction: row; /* 가로배치 하위요소  row기본값 (생략시) */
+flex-direction: column; /* 세로배치 하위요소*/
+justify-content: flex-start; /* 하위요소들 가로 정렬 (기본값)왼쪽 */
+justify-content: flex-end; /* 가로정렬 오른쪽  */
+justify-content: center; /* 가로정렬 중앙  */
+justify-content: space-between; /* 양쪽 여백 균등 정렬  */
+justify-content: space-evenly; /* 양쪽/사이 여백 균등 정렬  */
+gap: 10px 20px; /* 세로여백 가로여백  */
+

@@ -179,7 +179,7 @@ li{
 .footer1 > ol{
     display: flex;
     gap: 30px;
-    margin-left: 80px;
+    margin-left: 0px;
     margin-bottom: 50px;
 }
 
@@ -200,4 +200,8 @@ li{
     padding-right: 200px;
 }
 
-
+.footer1{
+    width: 1280px;
+    margin: 0 auto
+    
+}

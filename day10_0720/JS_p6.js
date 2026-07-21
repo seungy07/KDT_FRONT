@@ -32,12 +32,21 @@ const words = ['apple', 'banana', 'kiwi', 'strawberry'];
 function findLongestWord(){
     let 긴단어 = ''
     for(let i = 0; i < words.length - 1; i++){
-        if(words[i].length < words[i+1].length){
+        if(words[i].length < words[i+1].length){  // 저장된 단어와 다음인덱스, 다다음인덱스를 비교하지 않음
             긴단어 = words[i+1]
         }else{ 긴단어 = words[i]}
     }console.log(긴단어)
 }findLongestWord()
-
+/* 풀이
+function findLongestWord(문자열배열){ 
+    let max = 문자열배열[0]
+    for(let i = 1; i <= 문자열배열.length - 1; i ++){
+        if( max.length <= 문자열배열[i].length ){
+            max = 문자열[i]
+        }
+    }
+}console.log( function findLongestWord(words) )
+*/
 
 
 /*실습 4: 게임 점수 관리하기

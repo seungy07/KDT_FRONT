@@ -44,6 +44,7 @@ function 등록함수(){
     // 배열 저장
     가계부목록.push(객체)
     alert('등록성공')
+    document.querSelector('.날짜입력').value = '' // 출력 후 입력받은 값들 초기화
     출력함수() //등록 성공시 출력 한번
 }
 

@@ -5,11 +5,11 @@ function 등록(){
 
     //항목이름
     let 항목 = document.querySelector(".항목")
-    let 항목값 = 항목.value.toLocaleString()
+    let 항목값 = 항목.value
 
     //금액
     let 금액 = document.querySelector(".금액")  
-    let 금액값 = 금액.value
+    let 금액값 = Number(금액.value).toLocaleString()
 
     //tbody 마크업 사이에 값을 넣는다
     let tbody = document.querySelector('tbody')

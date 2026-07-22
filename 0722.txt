@@ -1,0 +1,18 @@
+07/21
+
+HTML( 마크업 언어 )  VS  JS( 프로그래밍 언어 ),  추후에 리액트는 가상/가짜 DOM 생성 <div2>
+- DOM : document object model , 문서(html) 객체 표준화 
+    1. document : 내장객체, HTML 제어/조작 가능한 객체
+    2. 주요속성
+        1) .querySelecto('css선택자') : 특정한 선택자의 마크업 DOM객체 1개 반환
+        2) .querySelectoAll( 'css선택자' ) : 특정한 선택자의 마크업DOM 객체 N개 반환(배열[ ])
+        3) .innerHTML : <마크업> inner <마크업>
+             * <div> <table> <h> <p> <span> 등등 주로 사용, <OO /> 불가능
+        4) .value : <마크업 value:" 여기! " > , 
+             * <input> <select>, <textarea> 등 주로 입력상자
+        5) .src : <마크업 src= " " />,  img 
+        6) .style : 마크업 DOM 객체내 CSS 문법 대입
+        7) .classList  :  마크업DOM 객체내 class 목록 반환
+        8) .remove( )  : 마크업DOM 객체 삭제
+        9) .toggle('클래스명' ) : 특정한 class를 추가하거나 삭제(존재하면)
+    

@@ -106,6 +106,36 @@ function productUpdate( pcode ){
 }
 
 // 등록 함수
+let finalPcode = 2 // pcode 구분용 마지막번호로 사용한 것 추후 +1 해서 사용 등록
+function productAdd(){
+    // 1. 입력받은 값 가져오기
+    let category = document.querySelector('.category').value // <select> 마크업의 value는 선택한 <option value> 반환
+    let name = document.querySelector('.name').value
+    let price =document.querySelector('.price').value
+    let image = document.querySelector('.image').files[0] // 이미지 .files 파일 여러개가 가능
+        // 유효성 판단/감사는 꼼꼼히                  // 여러개 등록시 .files[인덱스]로 구별 가능
+    if(category == 'disabled'){alert('카테고리선택'); return} // *코드의 흐름이 return 만나면 알코드를 생략하고 강제 함주 중지
+
+    // 2. 입력받은 값들을 객체화,  입력받은 값이 잘들어가는지 중간 중간 확인 console.log()
+        // pcode: 제품식별번호로 사용자가 지정하지 않고 자동번호, 마지막 사용된 제품코드 + 1
+        // pdate : 현재 시스템 날짜/ 시간 함수 , new Date()
+            // 현재연도: new Date().getFullYear()
+    // console.log(new Date().getFullYear())
+    // console.log(new Date().getMonth())  // 현재 월
+    // console.log(new Date().getDate()) // 현재 일
+    let pdate = `${ new Date().getFullYear() }-${ new Date().getMonth()+1 }-${ new Date().getDate()}`
+    let object = { ccode: category, pname: name, pprice: price, 
+                    // 만약 첨부파일선택이 없으면 (undefined) 기본이미지 이으면 선택한 첨부파일 가상URL 생성
+                    pimg: image == undefined ? 'https://placehold.co/100x100': URL.createObjectURL( image ) , // URL.createObjectURL(객체) 객체 (가상)주소
+                    pcode: finalPcode+1, pdate: pdate}
+    console.log(object) // 등록 확인용
+
+    // 3. 배열저장,               마지막 제품코드 1증가
+    productList.push( object ); finalPcode += 1
+    // 4. 성공
+    alert('등록성공'); productPrint(); // 화면 최신화 꼭
+    
+}
 
 
 

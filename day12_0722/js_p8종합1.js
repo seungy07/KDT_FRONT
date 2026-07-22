@@ -24,29 +24,88 @@
         
         4) JS(JSON)로 표현, 표 = 배열, 객체 = 행, 속성 = 열
 
-*/
+    3.기능 설계 : CRUD, RESTAPI
+        등록(CREATE) : 게시물쓰기, 회원가입, 수강신청 등등
+            실행조건: 등록버튼 클릭 ,함수명: productAdd ,  매개변수: x  , 반환값:x
 
+        조회(READ) : 게시물전체조회, 마이페이지 등등
+            실행조건: js 열릴떄/최신화(등록,수정,삭제) ,함수명:productPrint ,  매개변수:  , 반환값:
+
+        수정(UPDATE) : 게시물 수정, 내정보수정 등등
+            실행조건: 수정버튼 클릭했을떄 ,함수명: productUpdate ,  매개변수: 수정할제품코드(누구를/대상)  , 반환값:x
+
+        삭제(DELETE) : 게시물삭제, 회원탈퇴
+            실행조건: 삭제버튼클릭, 함수명:produtDelete ,  매개변수: 삭제할 제품코드(누구를/대상)  , 반환값: x
+
+*/
+// 2.
 let categoryList = [ { 'ccode': 1, 'cname': '음료' }, { 'ccode': 2, 'cname': '과자' }]
 let productList = [
-    { 'pcode': 1, 'pname': '콜라', 'pprice':1000, 'pimag': 'https://placehold.co/100x100', 'pdate': '2026-07-22', 'ccode':1},
-    { 'pcode': 2, 'pname': '사이다', 'pprice':2000, 'pimag': 'https://placehold.co/100x100', 'pdate': '2026-07-23', 'ccode':1}
+    { 'pcode': 1, 'pname': '콜라', 'pprice':1000, 'pimg': 'https://placehold.co/100x100', 'pdate': '2026-07-22', 'ccode':1},
+    { 'pcode': 2, 'pname': '사이다', 'pprice':2000, 'pimg': 'https://placehold.co/100x100', 'pdate': '2026-07-23', 'ccode':1}
 ]
 
-// 제품 등록 기능
-function productAdd(){
-    let category = document.querySelector('.category').value
-    let name = document.querySelector('.name').value
-    let price = Number(document.querySelector('.price').value).toLocaleString()
-    let image = document.querySelector('.image').value 
-
-    let tbody = document.querySelector('tbody')
-    tbody.innerHTML += `<tr>
-                        <td> <img src=${image}/> </td>
-                        <td> ${category} </td> <td> ${name} </td> <td> ${price} </td> <td> 2026-01-26 </td> 
-                        <td> 
-                            <button class="deleteBtn">삭제</button> 
-                            <button class="updateBtn">수정</button> 
-                        </td>
-                    </tr>`
-
+// 전체조회 함수
+productPrint() // JS가 열릴때 최초 1번 실행
+function productPrint( ){
+    // 1. 어디에
+    let tbody = document.querySelector( '#main table tbody' )
+    // 2. 무엇을, 배열내 모든 객체(자료)들을 HTML(문자열) 형식 구성
+    let html = ''
+    for(let index = 0; index <= productList.length-1; index++){
+        let product = productList[index] // 인덱스 번째 객체 하나
+        // 현재 index번째 제품의 카테고리번호에 해당하는 카테고리명 찾기
+        let cname = ''
+        for( let i = 0; i <= categoryList.length - 1; i++){
+            if(categoryList[i].ccode = product.ccode){ // 카테고리 번호와 제품의 카테고리번호 같다면
+                cname = categoryList[i].cname;
+                break; 
+            }
+        }
+        html += `<tr>
+                    <td> <img src="${product.pimg}"/> </td>
+                    <td> ${ cname } </td> <td> ${product.pname} </td>
+                    <td> ${product.pprice} </td> <td> ${product.pdate} </td> 
+                    <td> 
+                        <button class="deleteBtn" onClick="productDelet( ${product.pcode} )">삭제</button> 
+                        <button class="updateBtn" onClick="productUpdate(${product.pcode})">수정</button> 
+                    </td>  
+                </tr>` // 샘플이 있으면  ` 복붙 `    
+    }
+    // 3. 출력
+    tbody.innerHTML = html
 }
+
+// 삭제 함수, 출력함수에서 삭제 할 제품코드를 매개변수로 받아온다
+function productDelet(pcode){
+    // 1. 삭제할 pcode의 제품객체를 배열에서 찾는다
+    for(let index = 0; index <= productList.length - 1; index++){
+        if(productList[index].pcode == pcode){
+            // 2.배열에서 요소 삭제 splic(인덱스, 개수)
+            productList.splice(index, 1);
+            alert('삭제 성공');
+            productPrint( )// 3. 화면 최산화 (전체 조회 새로고침 == 재렌더링) 없으면 삭제만되고 화면이 그대로
+            return // 주의할점: function{ } 탈출 vs for { } 탈출
+        }
+    }
+}
+
+// 수정 함수
+function productUpdate( pcode ){
+    // 1. 수정할 pcode의 제품객체를 배열에서 찾는다
+    for( let index = 0; index <= productList.length - 1; index++){
+        if(productList[index].pcode == pcode){
+            let newPname = prompt('수정할 제품명')
+            let newPprice = prompt('수정할 가격')
+            // 2. 배열에서 특정한 요소값 수정
+            productList[index].pname = newPname
+            productList[index].pprice = newPprice
+            productPrint(); return;
+        }
+    }
+}
+
+// 등록 함수
+
+
+

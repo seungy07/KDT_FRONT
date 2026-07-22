@@ -7,19 +7,23 @@ let nameList = [
     { 'tcode': 1, 'Wcode': 1 ,'name': '김민준', '직급': '선임개발자', 'img': 'https://placehold.co/100x100'},
     { 'tcode': 2, 'Wcode': 2 ,'name': '이서연', '직급': '수석디자이너', 'img': 'https://placehold.co/100x100'},
     { 'tcode': 3, 'Wcode': 3 ,'name': '박도윤', '직급': '팀장', 'img': 'https://placehold.co/100x100'}
-]	
+]
+let vacationList = [
+    {Wcode : 1, vcode: 1, vstart: '2025-08-04', vend: '2025-08-04', vreason: '병원 진료', state: 'true'},
+    {Wcode : 2,  vcode: 2,  vstart: '2025-07-21', vend: '2025-07-25', vreason: '여름 휴가', vstate: 'true'}]
+
 
 //조회 workerPrint 
 workerPrint()
 function workerPrint(){
     // 사원 전체 목록 조회
-    document.querySelector('.card sub-section > tbody')
+    let tbody = document.querySelector('.card.sub-section > .employee-table > tbody')
     let html = ''
     for(let index=0; index <= nameList.length-1; index++){
         let person = nameList[index] // index번쨰 객체(사원)
         let teamName = '' // 부서 명
         for(let index=0; index <= teamList.length-1; index++){
-            if(teamList[index].tcode == nametist[index].tcode){
+            if(teamList[index].tcode == nameList[index].Wcode){
                 teamName = teamList[index].tname;
                 break;
             }
@@ -35,9 +39,10 @@ function workerPrint(){
                     </td>
                 </tr>`
     }
+    tbody.innerHTML = html
 }
 
-//수정workerUpdate  현재 새로고침만됨고 아무것도 안일어남** 수정해야함 부서명 변경시-> 부서코드변경 저장
+//수정workerUpdate 
 function workerUpdate( tcode ){
     for(let i=0; i <= nameList.length-1; i++){
         if(nameList[i].tcode == tcode){
@@ -59,6 +64,7 @@ function workerDelete( tcode ){
         if(nameList[i].tcode == tcode){
             nameList.splice(i,1);
             alert('삭제');
+            // 휴가 신청 목록 조회
             workerPrint();
             break;
         }

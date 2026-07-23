@@ -46,5 +46,5 @@ function login(){
             break;
         }else{alert('동일한 회원정보가 없습니다. 로그인 실패')}
     }
-    
 }
+// if(memberList != null) 추가 고려 

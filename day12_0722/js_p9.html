@@ -291,7 +291,7 @@
         <h2 class="card-title">부서 관리</h2>
         <div class="dept-input-group">
           <input type="text" placeholder="신규 부서명 입력">
-          <button type="button" class="btn btn-purple">추가</button>
+          <button type="button" class="btn btn-purple" onclick="teamAdd()">추가</button>
         </div>
 
         <table>
@@ -424,7 +424,7 @@
         <form>
           <div class="form-group">
             <label>신청 사원</label>
-            <select>
+            <select class="휴가신청자">
               <option disabled selected hidden>휴가 신청 사원을 선택하세요</option>
               <option>김민준</option>
               <option>이서연</option>
@@ -435,21 +435,21 @@
           <div class="input-row">
             <div class="form-group">
               <label>휴가 시작일</label>
-              <input type="date">
+              <input class="휴가시작일" type="date">
             </div>
             <div class="form-group">
               <label>휴가 종료일</label>
-              <input type="date">
+              <input class="휴가종료일" type="date">
             </div>
           </div>
 
           <div class="form-group">
             <label>휴가 사유</label>
-            <input type="text" placeholder="예: 여름 휴가">
+            <input class="휴가사유" type="text" placeholder="예: 여름 휴가">
           </div>
 
           <div class="btn-right-align">
-            <button type="button" class="btn btn-teal">신청</button>
+            <button type="button" class="btn btn-teal" onclick="vaAdd( )">신청</button>
           </div>
         </form>
       </div>

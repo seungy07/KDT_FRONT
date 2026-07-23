@@ -88,4 +88,120 @@ function workerAdd(){  // 버튼에 onclick="workerAdd()" 추가
     alert('등록성공'); workerPrint(); 
    
 }
+// ================================================================================================================================
+// 부서 관리
+function teamPrint(){
+    let tbody = document.querySelector('.card table tbody');
+    
+    let html='';
+    
+    for(let i = 0; i<teamList.length; i++){
+            let team = teamList[i];
 
+
+            html += `<tr>
+              <td>${team.tname}</td>
+              <td class="action-links align-right">
+                <a href="javascript:teamUpdate(${team.tcode})" class="link-edit">수정</a>
+                <a href="javascript:teamDelete(${team.tcode})" class="link-delete">삭제</a>
+              </td>
+                </tr> `
+    }
+
+    tbody.innerHTML = html;
+   
+} teamPrint()
+
+let finaltcode = 4;
+
+function teamAdd(){
+    let teaminput = document.querySelector('.dept-input-group input').value;
+    let result = { 'tcode': finaltcode++ , 'tname': teaminput };
+
+    if(teaminput == ''){
+        alert('부서명을 입력해주세요');
+        return;
+    }
+
+    teamList.push(result);
+
+    teamPrint();
+    console.log(teamList);
+    return;
+}
+    
+
+
+function teamUpdate(tcode){
+    for( let j = 0 ; j < teamList.length ; j++ ){
+        if(teamList[j].tcode == tcode){
+            let newname = prompt('부서명 변경');
+            teamList[j].tname = newname;
+        }
+    }
+   teamPrint();
+    return;
+}
+
+function teamDelete(tcode){
+    for( let j = 0 ; j < teamList.length ; j++ ){
+        if(teamList[j].tcode == tcode){
+            teamList.splice(j , 1);
+        }
+    }
+    teamPrint();
+    return;
+}
+
+//=========================================================================================
+// 휴가 관리  수정필요
+//조회
+vaPrint();
+function vaPrint( ){
+    let box = document.querySelector(".card.sub-section");
+    let html = "";
+    for(let index = 0; index <= vacationList.length -1; index++){
+        let vacation = vacationList[ index ];
+        let workerName = "";
+        for(let index = 0; index <= nameList.length -1; index++){
+            if( nameList[ index ].Wcode == vacation.Wcode){
+                workerName = nameList[ index ].name;
+                break;
+            }
+        }
+        html += `
+        <div class="vacation-card">
+            <div class="user-name"> ${workerName} </div>
+            <div class="date"> ${vacation.vstart}-${vacation.vend} </div>
+            <div class="reason"> 사유 : ${vacation.vreason} </div>
+            <button class="btn-cancel" onclick="vaDelete(${vacation.vcode})"> 신청취소 </button>
+        </div>
+        `;
+    }
+    box.innerHTML = html;
+}
+//추가
+let finalVcode = 2;
+function vaAdd( ){
+    let worker = document.querySelector( ".휴가신청자" ).value; //Wcode를 반환 123
+    let start = document.querySelector( ".휴가시작일" ).value;
+    let end = document.querySelector( ".휴가종료일" ).value;
+    let reason = document.querySelector(".휴가사유").value;
+
+    let object = {Wcode : worker, vcode: finalVcode+1 , vstart: start, vend: end, vreason: reason }
+    vacationList.push( object );
+
+    alert( "휴가 신청 완료" );
+    vaPrint( );
+}
+//삭제
+function vaDelete(vcode){
+    for(let index = 0; index <= vacationList.length -1; index++){
+        if(vacationList[index].vcode == vcode){
+            vacationList[index].vstate = false;
+            alert("휴가 신청이 취소되었습니다.");
+            vaPrint( );
+            return;
+        }
+    }
+}

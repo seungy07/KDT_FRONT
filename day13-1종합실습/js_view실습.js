@@ -33,7 +33,7 @@ function boardDelete(){
             if( 비밀번호 == boardList[i].pw ){
                 boardList.splice(i,1);
                 
-            }  
+            }// else{alert('비밀번호 틀림')} 없음
         }
     }
     localStorage.setItem('boardList', JSON.stringify(boardList))

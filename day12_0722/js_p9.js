@@ -198,7 +198,7 @@ function vaAdd( ){
 function vaDelete(vcode){
     for(let index = 0; index <= vacationList.length -1; index++){
         if(vacationList[index].vcode == vcode){
-            vacationList[index].vstate = false;
+            vacationList.splice(index,1);
             alert("휴가 신청이 취소되었습니다.");
             vaPrint( );
             return;

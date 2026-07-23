@@ -1,4 +1,4 @@
-07/21
+07/21 - 22
 
 HTML( 마크업 언어 )  VS  JS( 프로그래밍 언어 ),  추후에 리액트는 가상/가짜 DOM 생성 <div2>
 - DOM : document object model , 문서(html) 객체 표준화 
@@ -15,4 +15,11 @@ HTML( 마크업 언어 )  VS  JS( 프로그래밍 언어 ),  추후에 리액트
         7) .classList  :  마크업DOM 객체내 class 목록 반환
         8) .remove( )  : 마크업DOM 객체 삭제
         9) .toggle('클래스명' ) : 특정한 class를 추가하거나 삭제(존재하면)
-    
+        10) .files[0]    : < input type="file"/ > 첨부파일 객체로 반환
+
+
+- 함수들
+1) "문자열".toLocaleString() : 천단위 , 표시
+2) .getFullYear() : 현재연도
+   .getMonth() : 현재 월
+   .getDate() : 현재 일

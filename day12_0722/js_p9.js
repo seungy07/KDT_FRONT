@@ -158,7 +158,7 @@ function teamDelete(tcode){
 //조회
 vaPrint();
 function vaPrint( ){
-    let box = document.querySelector(".card.sub-section");
+    let box = document.querySelector(".휴가신청현황");
     let html = "";
     for(let index = 0; index <= vacationList.length -1; index++){
         let vacation = vacationList[ index ];

@@ -1,0 +1,44 @@
+a{ text-decoration:none; color:black;}
+li{ list-style:none;}
+
+div{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
+
+.button{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:black;
+    color:white;
+    font-size:35px;
+
+}
+
+.menu{
+    position:absolute;
+    bottom:70px;
+    right:0;
+
+    display:none;
+}
+
+div:hover .menu{ display:block;}
+
+.menu li{
+    width:40px;
+    height:40px;
+    margin:15px 0;
+    border-radius:50%;
+    text-align:center;
+    line-height:40px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.top{background:#e9f0ff;}
+.naver{background:#eafff1;}
+.help{background:#fef2e8;}
+.chat{background:#f5eaff;}

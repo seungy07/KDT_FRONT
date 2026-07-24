@@ -75,7 +75,7 @@ li{ list-style-type: none; }
     /* box-sizsing: border-box : 컨텐츠 + 안쪽여백(padding) (권장) */ 
     .box7{ box-sizing: border-box;}
 
- - flex
+ - flex : 직계 하위 요소만
 display : flex; 기본선언후 사용
 /* 하위요소들의 크기가 구역보다 커지면 자동크기조정 */
 flex-wrap:  nowrap; /* 자동크기 부여 (기본값), wrap:자동줄바꿈 처리 */

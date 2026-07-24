@@ -1,4 +1,4 @@
-07/21 - 22
+07/21 - 22 - 23
 
 HTML( 마크업 언어 )  VS  JS( 프로그래밍 언어 ),  추후에 리액트는 가상/가짜 DOM 생성 <div2>
 - DOM : document object model , 문서(html) 객체 표준화 

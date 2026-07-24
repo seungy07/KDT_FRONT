@@ -1,0 +1,45 @@
+/*
+    position
+*/
+
+.box{
+    width: 100px; height: 100px;
+    background-color: yellow;
+    border: 1px solid red;
+}
+.box2{
+    /* 요소 배치/위치 순서 : static(기본값) 정적, 위치변경 불가능*/
+    position: static;
+    left: 50px; 
+}
+
+.box3{ /* - 붙으면 반대로 이동 */
+    position: relative; /* relative 상대적인(원래있던) 위치 */
+    top: 50px;  /* 위쪽 50px 아래로 이동 */
+    left: 50px; /* 왼쪽에서 50px 오른쪽으로 이동 */
+}
+
+.box4{
+    position: absolute; /* 절대( 가장 가까운 positiont상위요소(마크업)) 위치, **position사용하는 */
+    top: 50px; left: 50px;
+}
+.parent{ position: relative; }
+.box6{ /* 상위 부모 마크업이 position을 사용해야함 ,, 단 static 은 제외*/
+    position: absolute;
+    top: 50px; left: 30px;}
+
+.box5{
+    position: fixed; /* 디바이스(화면) 위치 고정*/
+    bottom: 50px;
+    right: 0px;
+}
+
+.header{
+    display: flex; background-color: beige;
+    position: sticky; /* 디바이스(화면) 벗어나면 위치 고정 */
+    top: 0px;
+    z-index: -1; /* 포지션을 사용하는 요소들간의 겹쳤을때 우선순위: *높을수록* */
+}
+.header > ul{
+    display: flex;
+}

@@ -20,6 +20,39 @@ HTML( 마크업 언어 )  VS  JS( 프로그래밍 언어 ),  추후에 리액트
 
 - 함수들
 1) "문자열".toLocaleString() : 천단위 , 표시
-2) .getFullYear() : 현재연도
-   .getMonth() : 현재 월
-   .getDate() : 현재 일
+2) new Date().getFullYear() : 현재연도
+   new Date().getMonth() : 현재 월
+   new Date().getDate() : 현재 일
+   - 시, 분 , 초...
+
+
+- 웹스토리지 : 브라우저 저장소 ( 문자열 타입 ) 
+     1. 세션스토리지
+          - sessionStorage 객체, 브라우저가 종료되면 초기화
+     2. 로컬스토리지
+          - localStrage 객체, 브라우저가 종료되더라도 유지
+     3. 사용법 ( 저장과 호출은 문자열[ ]로만으로 나온다 )
+          .setItem( 'key', value ) : 스토리지에 자료 저장
+          .getItem( 'ket' ) : 스토리지에 자료 호출 
+          .remove('key') : 스토리지 자료삭제
+     4. JSON(자바스트립트 객체)형 변환
+          JSON --> String : JSON.stringify( 객체 )
+          String --> JSON: JSON.parse( 문자열 )
+
+- 쿼리스트링 : HTTP 웹주소(경로 / URL)에 매개변수 포함 할때 , *문자열 타입*
+     1. 목적 : 페이지 이동간에 자료 전달, * 식별자* 
+     2. 사용법
+          - URL ? 매개변수명 = 값 & 매개변수명 = 값
+          - new URLSearchParams( location.search ).get('매개변수') : URL 존재하는 매개변수값 호출
+
+- 페이지전환
+     1. html : <a href="URL"> 링크1 </a>
+          - <a href="URL? pk=${매개변수 값}"> 링크1 </a>
+     2. JS : location.href = "URL"
+
+- 인터벌 : 특정한 주기(시간)에 따른 함수 반복 실행
+     1. 사용처 : 타이머 , 시계 (인증시간 등), CSS 자동변경(이미지 슬라이드) 등등
+     2. 사용법 : (*주로 변수에 담아서 사용)
+          let 변수 = setInterval(함수명, 밀리초) : 밀리초(1/1000)마다 지정한 함수가 실행
+          clearInterval( 인터벌객체 ) : 인터벌 종료/삭제 
+

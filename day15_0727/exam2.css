@@ -1,0 +1,23 @@
+
+.box{
+    border: 1px solid red;
+    padding: 10px; margin-bottom: 100px;
+}
+
+.size1{ width: 200px; height: 200px;}
+
+/* width 사이즈 설정 하지 않으면 기본값은 (부모기준) 100% */
+.size2{ min-width: 10vw} /* 최소 가로 사이즈 설정 : 600px 작아지면 고정 */
+.size3{ max-width: 600px;} /* 최대 가로 사이즈 설정 */
+
+/* overflow: 하위 요소들이 컨테츠(이미지/텍스트) 넘쳤을때 */
+.size4{ width: 200px; height: 50px;
+    overflow: visible; /* 그래도 보여주는게 기본값*/    }
+.size5{ width: 200px; height: 50px;
+    overflow: hidden; /* 넘치는 부분 숨김 */ }
+.size6{ width: 200px; height: 50px;
+    overflow: scroll; /* 스크롤 설정 */ }
+.size7{ width: 200px; height: 50px;
+    overflow-y: scroll; overflow-x: hidden; /* 가로 세로 각각 설정이 가능하다 */ }
+
+

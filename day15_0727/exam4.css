@@ -1,0 +1,41 @@
+
+.box{border: 1px solid red; padding: 30px;}
+
+.back1{
+    background-color: blue;
+    background-color: rgb(0,0,255, 0.5); /* 마지막 투명도 */
+    background-color: #0000ff; 
+}
+
+.back2{
+    background-image: url("exam3/배경.jpg"); /* css에서 배경이미지 삽입 */
+    background-repeat: no-repeat; /* 배경 이미지 자동 채우기, 채우기 없음 */
+    background-position: center left; /* left right center top bottom */
+}
+
+.back3{
+    background-image: url('exam3/패턴.jpg');
+    background-repeat: repeat; /* 기본값 */
+}
+
+
+.back4{
+    background-image: url('exam3/배경.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* 배경 이미지 사이즈 설정 /  전체크기 */
+    background-attachment: fixed; /* 스크롤시 배경이미지 따라오게 만듬 */
+}
+
+/* 아이콘1개(이미지1개)이므로 여러 아이콘들을 호출하는 것보다, 모아놓은 이미지 1개로 관리 */
+.box2{
+    width: 100px; height: 100px;
+    background-image: url('exam3/아이콘들.png');
+    background-repeat: no-repeat; 
+    background-position: 10px 10px; /* 위치 이동 left,top */
+}
+
+
+
+
+
+

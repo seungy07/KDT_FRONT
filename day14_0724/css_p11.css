@@ -60,8 +60,25 @@ body{ width: 100%;}
     color: #9999;
 }
 
-.goods1{display: flex;}
-.main_goods > ol >li >img{width: 380px;}
+/* 상품 한개 */
+.main_goods{ display: flex; flex-wrap: wrap; justify-content: space-between;}
+.goods{width: 380px; margin: 30px 0px ;}
+.goods > img{ width: 100%; }
+.review_color{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+.review_color > .color > span{
+    width: 10px; height: 10px;
+    display: inline-block; border: 1px solid #dbdbdb;
+}
+.review{color: #999999;}
+.size{ font-size: 10px; color: #999999; margin: 1px;}
 
-.goods_review{display: flex; justify-content: space-between;}
-
+.price{color: #999999; text-decoration: line-through;}
+.price_info{position: relative; margin: 5px;}
+.dis{
+    position: absolute;
+    right: 0px; top: 0px;
+}
